@@ -1,0 +1,36 @@
+$(document).ready(function() {
+	$('#infoTable').dataTable({
+		"autoWidth" : false,
+        "search": {
+            "addClass": 'form-control input-lg col-xs-2'
+        },
+		  "lengthMenu" : [ [ 10, 20, 50 ], [ "--10 dòng--", "--20 dòng--", "--50 dòng--"] ],
+		    'stripeClasses':['stripe1','stripe2'],
+		    columnDefs: [
+		  	    // Center align the header content of column 1
+		  	   { className: "dt-head-center", targets: [ 1 ] },
+		  	   // Center align the body content of columns 2, 3, & 4
+		  	   { className: "dt-body-center", targets: [ 1 ] }
+		  	 
+		  	],
+		    "language": {
+	            "lengthMenu": "_MENU_",
+	            "zeroRecords": "Không có dữ liệu",
+	            "info": "Tổng _MAX_ dữ liệu",
+//	            "info": "Showing _START_ to _END_ of _TOTAL_ entries",
+//	            "info":"Hiển thị từ _START_ đến _END_ trong _TOTAL_ dữ liệu",
+//	            "infoEmpty": "Không có dữ liệu",
+	            "infoEmpty": "",
+	            "paginate": {
+	                "first":      "First",
+	                "last":       "Last",
+	                "next":       "Sau",
+	                "previous":   "Trước"
+	            },
+	            "infoFiltered":   "",
+	            "search":         "_INPUT_",
+	            "searchPlaceholder" : "Tìm kiếm",
+	    },
+	    
+	});
+});
